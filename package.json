@@ -7,8 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "bem-xjst": "git+ssh://git@github.com:alfa-bank-dev/bem-xjst.git",
     "bem-css-loader": "git+ssh://git@github.com:alfa-bank-dev/bem-css-loader.git",
+    "bem-xjst": "git+ssh://git@github.com:alfa-bank-dev/bem-xjst.git",
+    "react": "^0.14.7",
     "ui": "git+ssh://git@github.com:alfa-bank-dev/ui.git",
     "webpack": "^1.12.13"
   },
