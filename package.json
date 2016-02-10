@@ -1,0 +1,17 @@
+{
+  "name": "bemreact-integration",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bem-xjst": "git+ssh://git@github.com:alfa-bank-dev/bem-xjst.git",
+    "bem-css-loader": "git+ssh://git@github.com:alfa-bank-dev/bem-css-loader.git",
+    "ui": "git+ssh://git@github.com:alfa-bank-dev/ui.git",
+    "webpack": "^1.12.13"
+  },
+  "author": "",
+  "license": "ISC"
+}
