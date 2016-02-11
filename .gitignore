@@ -3,3 +3,4 @@ npm-debug.log
 bem-templates.js
 bundle.js
 *js.map
+dist/main.js

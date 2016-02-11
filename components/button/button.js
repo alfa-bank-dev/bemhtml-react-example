@@ -1,7 +1,5 @@
 'use strict';
 var bemreact = require('../../lib/bemreact');
-// TODO
-//
 var React = require('react');
 require('bem-css-loader!./button.css');
 

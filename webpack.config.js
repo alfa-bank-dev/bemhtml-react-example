@@ -12,10 +12,6 @@ var bemxjst = require('bem-xjst');
 
 module.exports = {
     entry: './index.js',
-    output: {
-        path: __dirname,
-        filename: 'bundle.js'
-    },
     module: {
         loaders: [
             {
@@ -35,21 +31,27 @@ module.exports = {
         ]
     },
     devtool: 'source-map',
+    output: {
+        path: path.join(__dirname, 'dist'),
+        filename: '[name].js',
+    },
     plugins: [
         new CollectBemAssetsPlugin({
             done: function(data) {
                 bemCssLoaderSetData(data['post.css']);
-                var out = bemxjst.bemreact.generate(generateBemHtml(data.bemhtml));
-                fs.writeFileSync(
-                    './bem-templates.js',
-                    out
-                );
+                if (process.env.STANDALONE) {
+                    var out = bemxjst.bemreact.generate(generateBemHtml(data.bemhtml));
+                    fs.writeFileSync(
+                        './dist/bem-templates.js',
+                        out
+                    );
+                }
             },
             techs: ['post.css', 'bemhtml'],
             levels: bemLevels
             // levels: [ path.resolve(process.cwd(), './node_modules/ui/common.blocks') ]
         }),
     ],
-    postcss: postCssPlugins
+    postcss: postCssPlugins,
 };
 

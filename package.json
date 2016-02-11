@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
+    "build": "STANDALONE=1 webpack",
     "dev": "node dev-server.js",
     "postinstall": "cd ./node_modules/bem-xjst && npm run make-bemreact"
   },
