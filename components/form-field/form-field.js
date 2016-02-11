@@ -8,9 +8,21 @@ module.exports = class FormField extends React.Component {
         return bemreact({
             block: 'form-field',
             mods: {
+                theme: 'alfa-on-white',
+                size: 'm',
                 name: 'test',
             },
-            content: this.props.children
+            content: [
+                {
+                    elem: 'label',
+                    content: [this.props.label]
+                },
+                // FIXME: render last - trouble in bemreact
+                {
+                    elem: 'control',
+                    content: [this.props.control]
+                }
+            ]
         });
     }
 }
