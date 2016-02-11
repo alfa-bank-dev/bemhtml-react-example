@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "STANDALONE=1 webpack",
     "dev": "node dev-server.js",
-    "postinstall": "cd ./node_modules/bem-xjst && npm run make-bemreact"
+    "postinstall": "cd ./node_modules/bem-xjst && npm run make-bemreact",
+    "open": "open http://localhost:8080/main"
   },
   "dependencies": {
     "autoprefixer": "^6.0.3",
