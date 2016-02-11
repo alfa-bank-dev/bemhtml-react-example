@@ -8,7 +8,7 @@ var bemLevels = require('ui/.enb/config/levels.js').map(l => l.path);
 var fs = require('fs');
 var _ = require('lodash');
 var path = require('path');
-var bemxjst = require('bem-xjst');
+var bemxjst = require('../bem-xjst');
 
 module.exports = {
     entry: './index.js',
@@ -52,4 +52,3 @@ module.exports = {
     ],
     postcss: postCssPlugins
 };
-

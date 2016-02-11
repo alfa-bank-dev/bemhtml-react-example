@@ -7,17 +7,15 @@ require('bem-css-loader!./button.css');
 
 module.exports = class Button extends React.Component {
     render() {
-        // return React.createElement('div', { onMouseEnter: () => { console.log('okkafdsf'); } }, 'hi there');
         return bemreact({
+            block: 'button',
             attrs: {
-                onMouseEnter: function() {
+                onMouseEnter: function(e) {
                     console.log('hovered');
-                    // return 'hi there';
                 }
             },
-            block: 'button',
-            text: 'hi there',
-            mods: { size: 'm', theme: 'alfa-on-white', hovered: true }
+            mods: { size: 'm', theme: 'alfa-on-white', hovered: true },
+            text: 'hi there'
         });
     }
 }
