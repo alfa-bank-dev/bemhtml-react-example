@@ -3,7 +3,7 @@ var bemreact = require('../../lib/bemreact');
 var React = require('react');
 require('bem-css-loader!./button.css');
 
-module.exports = class Button extends React.Component {
+export class Button extends React.Component {
     render() {
         return bemreact({
             block: 'button',
