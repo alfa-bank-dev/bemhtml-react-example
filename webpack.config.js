@@ -34,19 +34,20 @@ module.exports = {
             }
         ]
     },
+    devtool: 'source-map',
     plugins: [
         new CollectBemAssetsPlugin({
             done: function(data) {
                 bemCssLoaderSetData(data['post.css']);
+                var out = bemxjst.bemreact.generate(generateBemHtml(data.bemhtml));
                 fs.writeFileSync(
                     './bem-templates.js',
-                    // generateBemHtml(_.pick(data.bemhtml, ['button']))
-                    bemxjst.bemreact.generate(generateBemHtml(data.bemhtml))
+                    out
                 );
             },
             techs: ['post.css', 'bemhtml'],
-            // levels: bemLevels // FIXME - doesn't work with all levels
-            levels: [ path.resolve(process.cwd(), './node_modules/ui/common.blocks') ]
+            levels: bemLevels
+            // levels: [ path.resolve(process.cwd(), './node_modules/ui/common.blocks') ]
         }),
     ],
     postcss: postCssPlugins
