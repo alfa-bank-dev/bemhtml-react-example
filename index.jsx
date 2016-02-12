@@ -10,7 +10,6 @@ if (!document.querySelector('#root')) {
     document.body.appendChild(div);
 }
 
-
 // - check how to pass text into this.props.children <Button>asdfsadf</Button>
 // - check why it renders only one child
 ReactDom.render(
@@ -19,7 +18,7 @@ ReactDom.render(
             <Label/>
         </FormFieldLabel>
         <FormFieldControl>
-             <Button/>
+             <Button>DEBUG test!!!</Button>
         </FormFieldControl>
      </FormField>,
      document.getElementById('root')
