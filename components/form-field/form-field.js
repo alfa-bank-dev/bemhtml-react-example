@@ -11,7 +11,7 @@ export class FormField extends React.Component {
                 size: 'm',
                 name: 'test',
             },
-            content: [this.props.children]
+            content: this.props.children
         });
     }
 }
@@ -21,7 +21,7 @@ export class FormFieldLabel extends React.Component {
         return bemreact({
             block: 'form-field',
             elem: 'label',
-            content: [this.props.children]
+            content: this.props.children
         });
     }
 }
@@ -31,7 +31,7 @@ export class FormFieldControl extends React.Component {
         return bemreact({
             block: 'form-field',
             elem: 'control',
-            content: [this.props.children]
+            content: this.props.children
         });
     }
 }
