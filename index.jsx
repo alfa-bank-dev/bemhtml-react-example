@@ -4,7 +4,7 @@ import { Label } from './components/label/label';
 import { Button } from './components/button/button';
 import { FormField, FormFieldLabel, FormFieldControl } from './components/form-field/form-field';
 import { Form } from './components/form/form';
-// import { Input } from './components/input/input';
+import { Input } from './components/input/input';
 import { Page } from './components/page/page';
 
 if (!document.querySelector('#root')) {
@@ -17,7 +17,7 @@ ReactDom.render(
     <Page>
         <Form>
             <FormField>
-            { /*<Input/> */ }
+                <Input/>
             </FormField>
             <FormField>
                 <FormFieldLabel>

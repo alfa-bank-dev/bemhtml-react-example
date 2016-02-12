@@ -6,7 +6,10 @@ export class Input extends React.Component {
 
     constructor(props, context) {
         super(props, context);
-        this.state = {};
+        this.state = {
+            hovered: false,
+            focused: false
+        };
     }
 
     render() {
@@ -16,11 +19,19 @@ export class Input extends React.Component {
                 onMouseEnter: () => {
                     this.setState({ hovered: true });
                 },
+                onFocus: () => {
+                    this.setState({ focused: true });
+                },
                 onMouseLeave: () => {
-                    this.setState({ hovered: false });
+                    this.setState({ hovered: false, focused: false });
                 }
             },
-            mods: { size: 'm', theme: 'alfa-on-white', hovered: this.state.hovered },
+            mods: {
+                size: 'm',
+                theme: 'alfa-on-white',
+                hovered: this.state.hovered,
+                focused: this.state.focused
+            },
             content: this.props.children
         });
     }
