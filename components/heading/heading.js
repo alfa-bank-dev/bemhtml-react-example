@@ -9,7 +9,7 @@ export class Heading extends React.Component {
             block: 'heading',
             mods: {
                 size: this.props.size,
-                theme: 'alfa-on-white'
+                theme: this.props.theme
             },
             content: this.props.children
         });

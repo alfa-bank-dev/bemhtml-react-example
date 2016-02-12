@@ -7,8 +7,8 @@ export class Form extends React.Component {
         return bemreact({
             block: 'form',
             mods: {
-                theme: 'alfa-on-white',
-                size: 'm',
+                theme: this.props.theme,
+                size: this.props.size
             },
             content: this.props.children
         });

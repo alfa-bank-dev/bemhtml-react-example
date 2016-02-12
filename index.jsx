@@ -18,14 +18,14 @@ if (!document.querySelector('#root')) {
 
 ReactDom.render(
     <Page>
-        <Heading size='xl'>
+        <Heading theme='alfa-on-white' size='xl'>
             Заголовок нах
         </Heading>
-        <Form>
-            <FormField>
+        <Form theme='alfa-on-white' size='m'>
+            <FormField theme='alfa-on-white' size='m' name='test1'>
                 <Select/>
             </FormField>
-            <FormField view='line'>
+            <FormField name='test2' theme='alfa-on-white' size='m' view='line'>
                 <FormFieldLabel>
                     <Label>it is a label</Label>
                 </FormFieldLabel>
@@ -33,7 +33,7 @@ ReactDom.render(
                     <Input/>
                 </FormFieldControl>
             </FormField>
-            <FormField>
+            <FormField name='test3' theme='alfa-on-white' size='m'>
                 <FormFieldLabel>
                     <Label>it is a label</Label>
                 </FormFieldLabel>

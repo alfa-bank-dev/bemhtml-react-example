@@ -8,9 +8,9 @@ export class FormField extends React.Component {
             block: 'form-field',
             mods: {
                 view: this.props.view,
-                theme: 'alfa-on-white',
-                size: 'm',
-                name: 'test',
+                theme: this.props.theme,
+                size: this.props.size,
+                name: this.props.name
             },
             content: this.props.children
         });
