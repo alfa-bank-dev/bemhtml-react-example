@@ -23,7 +23,10 @@ export class Input extends React.Component {
                     this.setState({ focused: true });
                 },
                 onMouseLeave: () => {
-                    this.setState({ hovered: false, focused: false });
+                    this.setState({ hovered: false });
+                },
+                onBlur: () => {
+                    this.setState({ focused: false });
                 }
             },
             mods: {
@@ -31,8 +34,7 @@ export class Input extends React.Component {
                 theme: 'alfa-on-white',
                 hovered: this.state.hovered,
                 focused: this.state.focused
-            },
-            content: this.props.children
+            }
         });
     }
 }

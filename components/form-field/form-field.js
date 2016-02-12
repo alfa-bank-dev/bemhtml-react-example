@@ -7,6 +7,7 @@ export class FormField extends React.Component {
         return bemreact({
             block: 'form-field',
             mods: {
+                view: this.props.view,
                 theme: 'alfa-on-white',
                 size: 'm',
                 name: 'test',

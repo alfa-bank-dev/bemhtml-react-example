@@ -7,7 +7,8 @@ export class Button extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
-            hovered: false
+            hovered: false,
+            focused: false
         };
     }
 
@@ -18,11 +19,19 @@ export class Button extends React.Component {
                 onMouseEnter: () => {
                     this.setState({ hovered: true });
                 },
+                onFocus: () => {
+                    console.log('!!!');
+                    this.setState({ focused: true });
+                },
                 onMouseLeave: () => {
                     this.setState({ hovered: false });
+                },
+                onBlur: () => {
+                    this.setState({ focused: false });
                 }
             },
             mods: { size: 'm', theme: 'alfa-on-white', hovered: this.state.hovered },
+            text: this.props.text,
             content: this.props.children
         });
     }
