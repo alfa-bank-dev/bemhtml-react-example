@@ -48,7 +48,7 @@ module.exports = {
             done: function(data) {
                 bemCssLoaderSetData(data['post.css']);
                 if (process.env.STANDALONE) {
-                    var out = bemxjst.bemreact.generate(generateBemHtml(data.bemhtml));
+                    var out = bemxjst.vidom.generate(generateBemHtml(data.bemhtml));
                     fs.writeFileSync(
                         './dist/bem-templates.js',
                         out
