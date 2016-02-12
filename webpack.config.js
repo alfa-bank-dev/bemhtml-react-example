@@ -9,6 +9,11 @@ var fs = require('fs');
 var _ = require('lodash');
 var path = require('path');
 var bemxjst = require('bem-xjst');
+const webpackPostcssTools = require('webpack-postcss-tools');
+const extensions = webpackPostcssTools.makeVarMap(path.resolve(__dirname, './mq.css')).media;
+
+// FIXME
+postCssPlugins = [require('postcss-custom-media')({ extensions })].concat(postCssPlugins);
 
 module.exports = {
     entry: './index.jsx',
@@ -21,6 +26,10 @@ module.exports = {
                     'css-loader',
                     'postcss-loader'
                 ].join('!')
+            },
+            {
+                test: /\.(ttf)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                loader: 'url-loader?mimetype=application/octet-stream'
             },
             {
                 test: /\.(svg)$/i,

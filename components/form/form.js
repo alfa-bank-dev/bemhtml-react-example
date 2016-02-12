@@ -1,16 +1,13 @@
-'use strict';
-require('bem-css-loader!./label.css');
+require('bem-css-loader!./form.css');
 var bemreact = require('../../lib/bemreact');
 var React = require('react');
 
-export class Label extends React.Component {
+export class Form extends React.Component {
     render() {
         return bemreact({
-            block: 'label',
+            block: 'form',
             mods: {
                 theme: 'alfa-on-white',
-                size: 'm',
-                name: 'test',
             },
             content: this.props.children
         });
