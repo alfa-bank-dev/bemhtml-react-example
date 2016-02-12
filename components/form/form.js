@@ -8,6 +8,7 @@ export class Form extends React.Component {
             block: 'form',
             mods: {
                 theme: 'alfa-on-white',
+                size: 'm',
             },
             content: this.props.children
         });
